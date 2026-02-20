@@ -111,12 +111,8 @@
   .corner-deco.bl { bottom:20px; left:20px; transform:rotate(20deg); }
   .corner-deco.br { bottom:20px; right:20px; transform:rotate(-20deg) scaleX(-1); }
 
-  /* Hide mobile header on desktop */
   .mobile-flex-header { display:none; }
 
-  /* ══════════════════════════════
-     MOBILE — single row, 6 columns
-  ══════════════════════════════ */
   @media (max-width:640px) {
     .container { padding:24px 6px 50px; }
     .arabic-title { font-size:32px; }
@@ -124,114 +120,53 @@
     .ramadan-banner { padding:14px; gap:10px; flex-direction:column; }
     .ramadan-divider-v { display:none; }
     .corner-deco { display:none; }
-
-    /* Hide desktop flex header */
     .table-header-row { display:none; }
-
-    /* Mobile flex header — same structure as rows for perfect alignment */
     .mobile-flex-header {
       display:flex;
       background:linear-gradient(135deg,var(--green-dark),#5d9070);
       align-items:stretch;
     }
     .mobile-flex-header .mfh-date {
-      width:54px;
-      min-width:54px;
-      max-width:54px;
-      flex:none;
-      padding:8px 2px 8px 4px;
-      color:white;
-      font-size:7.5px;
-      letter-spacing:1px;
-      text-transform:uppercase;
-      font-weight:600;
-      display:flex;
-      align-items:center;
+      width:54px; min-width:54px; max-width:54px; flex:none;
+      padding:8px 2px 8px 4px; color:white; font-size:7.5px;
+      letter-spacing:1px; text-transform:uppercase; font-weight:600;
+      display:flex; align-items:center;
     }
-    .mobile-flex-header .mfh-times {
-      flex:1;
-      min-width:0;
-      display:flex;
-    }
+    .mobile-flex-header .mfh-times { flex:1; min-width:0; display:flex; }
     .mobile-flex-header .mfh-col {
-      flex:1;
-      padding:8px 2px;
-      text-align:center;
-      color:white;
-      font-size:7.5px;
-      letter-spacing:1px;
-      text-transform:uppercase;
-      font-weight:600;
+      flex:1; padding:8px 2px; text-align:center; color:white;
+      font-size:7.5px; letter-spacing:1px; text-transform:uppercase; font-weight:600;
     }
     .mobile-th-icon { display:block; font-size:11px; margin-bottom:1px; }
     .mobile-th-sub { opacity:0.75; font-size:6.5px; display:block; margin-top:1px; }
-
-    /* Keep wrapper styling */
     .table-wrapper { background:var(--warm-white); box-shadow:0 4px 30px rgba(43,61,47,0.08); border:1px solid rgba(138,184,154,0.15); border-radius:16px; }
-
-    /* Row: flexbox */
-    .prayer-row {
-      display:flex;
-      align-items:stretch;
-      border-bottom:1px solid rgba(138,184,154,0.1);
-    }
+    .prayer-row { display:flex; align-items:stretch; border-bottom:1px solid rgba(138,184,154,0.1); }
     .prayer-row:last-child { border-bottom:none; }
     .prayer-row.today { background:linear-gradient(135deg,rgba(106,158,122,0.07),rgba(138,184,154,0.05)); }
     .prayer-row.today::before { display:none; }
-
-    /* Date cell: fixed same width as header */
     .card-date {
-      width:54px;
-      min-width:54px;
-      max-width:54px;
-      flex:none;
-      padding:8px 2px 8px 4px;
-      font-size:11px;
-      font-weight:600;
-      color:var(--text-dark);
-      display:flex;
-      align-items:center;
-      line-height:1.3;
+      width:54px; min-width:54px; max-width:54px; flex:none;
+      padding:8px 2px 8px 4px; font-size:11px; font-weight:600;
+      color:var(--text-dark); display:flex; align-items:center; line-height:1.3;
     }
     .today .card-date { color:var(--green-dark); font-weight:700; }
     .today .card-date .today-badge { display:none; }
-
-    /* card-table: flex so columns match header perfectly */
-    .card-table {
-      flex:1;
-      min-width:0;
-    }
+    .card-table { flex:1; min-width:0; }
     .card-table tr { display:flex; }
     .card-table td.pcell {
-      flex:1;
-      padding:8px 0;
-      text-align:center;
-      font-size:11px;
-      font-weight:500;
-      color:var(--text-mid);
-      border-left:1px solid rgba(138,184,154,0.1);
-      display:flex;
-      align-items:center;
-      justify-content:center;
+      flex:1; padding:8px 0; text-align:center; font-size:11px; font-weight:500;
+      color:var(--text-mid); border-left:1px solid rgba(138,184,154,0.1);
+      display:flex; align-items:center; justify-content:center;
     }
     .clabel { display:none; }
     .ptime { display:inline; font-size:11px; }
-
-    /* Colours */
     .today .card-table td.pcell { color:var(--text-dark); }
     .c-fajr .ptime { color:var(--green-dark); }
     .c-maghrib .ptime { color:var(--green-dark); }
-
-    /* Active prayer: pill highlight */
     .active-prayer .ptime {
-      display:inline-block;
-      background:var(--green-dark);
-      color:white !important;
-      border-radius:12px;
-      padding:2px 6px;
-      font-weight:700;
+      display:inline-block; background:var(--green-dark); color:white !important;
+      border-radius:12px; padding:2px 6px; font-weight:700;
     }
-
     .month-separator { margin:0; }
     .month-label { padding:6px 4px 6px 6px; font-size:8px; }
   }
@@ -291,8 +226,6 @@
       <div class="th"><span class="th-icon">☁️</span>Perëndimi<span class="th-sub">Akshami / Iftari</span></div>
       <div class="th"><span class="th-icon">✨</span>Darka<span class="th-sub">Jacia</span></div>
     </div>
-
-    <!-- Mobile flex header: same structure as rows for pixel-perfect alignment -->
     <div class="mobile-flex-header">
       <div class="mfh-date">Dita</div>
       <div class="mfh-times">
@@ -307,14 +240,13 @@
 
     <div id="prayerTable">
 
-<!-- ── SHKURT (Februrar) ── -->
 <div class="month-separator"><div class="month-label">🌙 Shkurt 2026 — Fillimi Ramazanit (19 Shkurt)</div></div>
 
 <div class="prayer-row">
   <div class="card-date">17 Shk</div>
   <table class="card-table" cellspacing="0" cellpadding="0"><tr>
-    <td class="pcell c-fajr"><span class="clabel">🌙 Agimi</span><span class="ptime">5:01</span></td>
-    <td class="pcell"><span class="clabel">☀️ Lindja</span><span class="ptime">6:26</span></td>
+    <td class="pcell c-fajr"><span class="clabel">🌙 Agimi</span><span class="ptime">05:01</span></td>
+    <td class="pcell"><span class="clabel">☀️ Lindja</span><span class="ptime">06:26</span></td>
     <td class="pcell"><span class="clabel">☀️ Dreka</span><span class="ptime">12:00</span></td>
     <td class="pcell"><span class="clabel">🌤️ Pasditja</span><span class="ptime">14:54</span></td>
     <td class="pcell c-maghrib"><span class="clabel">☁️ Iftar</span><span class="ptime">17:23</span></td>
@@ -324,8 +256,8 @@
 <div class="prayer-row">
   <div class="card-date">18 Shk</div>
   <table class="card-table" cellspacing="0" cellpadding="0"><tr>
-    <td class="pcell c-fajr"><span class="clabel">🌙 Agimi</span><span class="ptime">5:00</span></td>
-    <td class="pcell"><span class="clabel">☀️ Lindja</span><span class="ptime">6:25</span></td>
+    <td class="pcell c-fajr"><span class="clabel">🌙 Agimi</span><span class="ptime">05:00</span></td>
+    <td class="pcell"><span class="clabel">☀️ Lindja</span><span class="ptime">06:25</span></td>
     <td class="pcell"><span class="clabel">☀️ Dreka</span><span class="ptime">12:00</span></td>
     <td class="pcell"><span class="clabel">🌤️ Pasditja</span><span class="ptime">14:55</span></td>
     <td class="pcell c-maghrib"><span class="clabel">☁️ Iftar</span><span class="ptime">17:24</span></td>
@@ -335,8 +267,8 @@
 <div class="prayer-row">
   <div class="card-date">19 Shk</div>
   <table class="card-table" cellspacing="0" cellpadding="0"><tr>
-    <td class="pcell c-fajr"><span class="clabel">🌙 Agimi</span><span class="ptime">4:58</span></td>
-    <td class="pcell"><span class="clabel">☀️ Lindja</span><span class="ptime">6:24</span></td>
+    <td class="pcell c-fajr"><span class="clabel">🌙 Agimi</span><span class="ptime">04:58</span></td>
+    <td class="pcell"><span class="clabel">☀️ Lindja</span><span class="ptime">06:24</span></td>
     <td class="pcell"><span class="clabel">☀️ Dreka</span><span class="ptime">12:00</span></td>
     <td class="pcell"><span class="clabel">🌤️ Pasditja</span><span class="ptime">14:56</span></td>
     <td class="pcell c-maghrib"><span class="clabel">☁️ Iftar</span><span class="ptime">17:25</span></td>
@@ -346,8 +278,8 @@
 <div class="prayer-row today">
   <div class="card-date">20 Shk <span class="today-badge">Sot</span></div>
   <table class="card-table" cellspacing="0" cellpadding="0"><tr>
-    <td class="pcell c-fajr"><span class="clabel">🌙 Agimi</span><span class="ptime">4:57</span></td>
-    <td class="pcell"><span class="clabel">☀️ Lindja</span><span class="ptime">6:22</span></td>
+    <td class="pcell c-fajr"><span class="clabel">🌙 Agimi</span><span class="ptime">04:57</span></td>
+    <td class="pcell"><span class="clabel">☀️ Lindja</span><span class="ptime">06:22</span></td>
     <td class="pcell"><span class="clabel">☀️ Dreka</span><span class="ptime">11:59</span></td>
     <td class="pcell"><span class="clabel">🌤️ Pasditja</span><span class="ptime">14:57</span></td>
     <td class="pcell c-maghrib"><span class="clabel">☁️ Iftar</span><span class="ptime">17:27</span></td>
@@ -357,8 +289,8 @@
 <div class="prayer-row">
   <div class="card-date">21 Shk</div>
   <table class="card-table" cellspacing="0" cellpadding="0"><tr>
-    <td class="pcell c-fajr"><span class="clabel">🌙 Agimi</span><span class="ptime">4:56</span></td>
-    <td class="pcell"><span class="clabel">☀️ Lindja</span><span class="ptime">6:21</span></td>
+    <td class="pcell c-fajr"><span class="clabel">🌙 Agimi</span><span class="ptime">04:56</span></td>
+    <td class="pcell"><span class="clabel">☀️ Lindja</span><span class="ptime">06:21</span></td>
     <td class="pcell"><span class="clabel">☀️ Dreka</span><span class="ptime">11:59</span></td>
     <td class="pcell"><span class="clabel">🌤️ Pasditja</span><span class="ptime">14:58</span></td>
     <td class="pcell c-maghrib"><span class="clabel">☁️ Iftar</span><span class="ptime">17:28</span></td>
@@ -368,8 +300,8 @@
 <div class="prayer-row">
   <div class="card-date">22 Shk</div>
   <table class="card-table" cellspacing="0" cellpadding="0"><tr>
-    <td class="pcell c-fajr"><span class="clabel">🌙 Agimi</span><span class="ptime">4:54</span></td>
-    <td class="pcell"><span class="clabel">☀️ Lindja</span><span class="ptime">6:19</span></td>
+    <td class="pcell c-fajr"><span class="clabel">🌙 Agimi</span><span class="ptime">04:54</span></td>
+    <td class="pcell"><span class="clabel">☀️ Lindja</span><span class="ptime">06:19</span></td>
     <td class="pcell"><span class="clabel">☀️ Dreka</span><span class="ptime">11:59</span></td>
     <td class="pcell"><span class="clabel">🌤️ Pasditja</span><span class="ptime">14:58</span></td>
     <td class="pcell c-maghrib"><span class="clabel">☁️ Iftar</span><span class="ptime">17:29</span></td>
@@ -379,8 +311,8 @@
 <div class="prayer-row">
   <div class="card-date">23 Shk</div>
   <table class="card-table" cellspacing="0" cellpadding="0"><tr>
-    <td class="pcell c-fajr"><span class="clabel">🌙 Agimi</span><span class="ptime">4:53</span></td>
-    <td class="pcell"><span class="clabel">☀️ Lindja</span><span class="ptime">6:18</span></td>
+    <td class="pcell c-fajr"><span class="clabel">🌙 Agimi</span><span class="ptime">04:53</span></td>
+    <td class="pcell"><span class="clabel">☀️ Lindja</span><span class="ptime">06:18</span></td>
     <td class="pcell"><span class="clabel">☀️ Dreka</span><span class="ptime">11:59</span></td>
     <td class="pcell"><span class="clabel">🌤️ Pasditja</span><span class="ptime">14:59</span></td>
     <td class="pcell c-maghrib"><span class="clabel">☁️ Iftar</span><span class="ptime">17:30</span></td>
@@ -390,8 +322,8 @@
 <div class="prayer-row">
   <div class="card-date">24 Shk</div>
   <table class="card-table" cellspacing="0" cellpadding="0"><tr>
-    <td class="pcell c-fajr"><span class="clabel">🌙 Agimi</span><span class="ptime">4:51</span></td>
-    <td class="pcell"><span class="clabel">☀️ Lindja</span><span class="ptime">6:16</span></td>
+    <td class="pcell c-fajr"><span class="clabel">🌙 Agimi</span><span class="ptime">04:51</span></td>
+    <td class="pcell"><span class="clabel">☀️ Lindja</span><span class="ptime">06:16</span></td>
     <td class="pcell"><span class="clabel">☀️ Dreka</span><span class="ptime">11:59</span></td>
     <td class="pcell"><span class="clabel">🌤️ Pasditja</span><span class="ptime">15:00</span></td>
     <td class="pcell c-maghrib"><span class="clabel">☁️ Iftar</span><span class="ptime">17:32</span></td>
@@ -401,8 +333,8 @@
 <div class="prayer-row">
   <div class="card-date">25 Shk</div>
   <table class="card-table" cellspacing="0" cellpadding="0"><tr>
-    <td class="pcell c-fajr"><span class="clabel">🌙 Agimi</span><span class="ptime">4:50</span></td>
-    <td class="pcell"><span class="clabel">☀️ Lindja</span><span class="ptime">6:15</span></td>
+    <td class="pcell c-fajr"><span class="clabel">🌙 Agimi</span><span class="ptime">04:50</span></td>
+    <td class="pcell"><span class="clabel">☀️ Lindja</span><span class="ptime">06:15</span></td>
     <td class="pcell"><span class="clabel">☀️ Dreka</span><span class="ptime">11:59</span></td>
     <td class="pcell"><span class="clabel">🌤️ Pasditja</span><span class="ptime">15:01</span></td>
     <td class="pcell c-maghrib"><span class="clabel">☁️ Iftar</span><span class="ptime">17:33</span></td>
@@ -412,8 +344,8 @@
 <div class="prayer-row">
   <div class="card-date">26 Shk</div>
   <table class="card-table" cellspacing="0" cellpadding="0"><tr>
-    <td class="pcell c-fajr"><span class="clabel">🌙 Agimi</span><span class="ptime">4:49</span></td>
-    <td class="pcell"><span class="clabel">☀️ Lindja</span><span class="ptime">6:13</span></td>
+    <td class="pcell c-fajr"><span class="clabel">🌙 Agimi</span><span class="ptime">04:49</span></td>
+    <td class="pcell"><span class="clabel">☀️ Lindja</span><span class="ptime">06:13</span></td>
     <td class="pcell"><span class="clabel">☀️ Dreka</span><span class="ptime">11:59</span></td>
     <td class="pcell"><span class="clabel">🌤️ Pasditja</span><span class="ptime">15:02</span></td>
     <td class="pcell c-maghrib"><span class="clabel">☁️ Iftar</span><span class="ptime">17:34</span></td>
@@ -423,8 +355,8 @@
 <div class="prayer-row">
   <div class="card-date">27 Shk</div>
   <table class="card-table" cellspacing="0" cellpadding="0"><tr>
-    <td class="pcell c-fajr"><span class="clabel">🌙 Agimi</span><span class="ptime">4:47</span></td>
-    <td class="pcell"><span class="clabel">☀️ Lindja</span><span class="ptime">6:12</span></td>
+    <td class="pcell c-fajr"><span class="clabel">🌙 Agimi</span><span class="ptime">04:47</span></td>
+    <td class="pcell"><span class="clabel">☀️ Lindja</span><span class="ptime">06:12</span></td>
     <td class="pcell"><span class="clabel">☀️ Dreka</span><span class="ptime">11:58</span></td>
     <td class="pcell"><span class="clabel">🌤️ Pasditja</span><span class="ptime">15:03</span></td>
     <td class="pcell c-maghrib"><span class="clabel">☁️ Iftar</span><span class="ptime">17:35</span></td>
@@ -434,8 +366,8 @@
 <div class="prayer-row">
   <div class="card-date">28 Shk</div>
   <table class="card-table" cellspacing="0" cellpadding="0"><tr>
-    <td class="pcell c-fajr"><span class="clabel">🌙 Agimi</span><span class="ptime">4:46</span></td>
-    <td class="pcell"><span class="clabel">☀️ Lindja</span><span class="ptime">6:10</span></td>
+    <td class="pcell c-fajr"><span class="clabel">🌙 Agimi</span><span class="ptime">04:46</span></td>
+    <td class="pcell"><span class="clabel">☀️ Lindja</span><span class="ptime">06:10</span></td>
     <td class="pcell"><span class="clabel">☀️ Dreka</span><span class="ptime">11:58</span></td>
     <td class="pcell"><span class="clabel">🌤️ Pasditja</span><span class="ptime">15:03</span></td>
     <td class="pcell c-maghrib"><span class="clabel">☁️ Iftar</span><span class="ptime">17:36</span></td>
@@ -443,14 +375,13 @@
   </tr></table>
 </div>
 
-<!-- ── MARS (Mars) ── -->
 <div class="month-separator"><div class="month-label">🌙 Mars 2026 — Ramazani (mbarim 20 Mars)</div></div>
 
 <div class="prayer-row">
   <div class="card-date">1 Mar</div>
   <table class="card-table" cellspacing="0" cellpadding="0"><tr>
-    <td class="pcell c-fajr"><span class="clabel">🌙 Agimi</span><span class="ptime">4:44</span></td>
-    <td class="pcell"><span class="clabel">☀️ Lindja</span><span class="ptime">6:09</span></td>
+    <td class="pcell c-fajr"><span class="clabel">🌙 Agimi</span><span class="ptime">04:44</span></td>
+    <td class="pcell"><span class="clabel">☀️ Lindja</span><span class="ptime">06:09</span></td>
     <td class="pcell"><span class="clabel">☀️ Dreka</span><span class="ptime">11:58</span></td>
     <td class="pcell"><span class="clabel">🌤️ Pasditja</span><span class="ptime">15:04</span></td>
     <td class="pcell c-maghrib"><span class="clabel">☁️ Iftar</span><span class="ptime">17:37</span></td>
@@ -460,8 +391,8 @@
 <div class="prayer-row">
   <div class="card-date">2 Mar</div>
   <table class="card-table" cellspacing="0" cellpadding="0"><tr>
-    <td class="pcell c-fajr"><span class="clabel">🌙 Agimi</span><span class="ptime">4:42</span></td>
-    <td class="pcell"><span class="clabel">☀️ Lindja</span><span class="ptime">6:07</span></td>
+    <td class="pcell c-fajr"><span class="clabel">🌙 Agimi</span><span class="ptime">04:42</span></td>
+    <td class="pcell"><span class="clabel">☀️ Lindja</span><span class="ptime">06:07</span></td>
     <td class="pcell"><span class="clabel">☀️ Dreka</span><span class="ptime">11:58</span></td>
     <td class="pcell"><span class="clabel">🌤️ Pasditja</span><span class="ptime">15:05</span></td>
     <td class="pcell c-maghrib"><span class="clabel">☁️ Iftar</span><span class="ptime">17:39</span></td>
@@ -471,8 +402,8 @@
 <div class="prayer-row">
   <div class="card-date">3 Mar</div>
   <table class="card-table" cellspacing="0" cellpadding="0"><tr>
-    <td class="pcell c-fajr"><span class="clabel">🌙 Agimi</span><span class="ptime">4:41</span></td>
-    <td class="pcell"><span class="clabel">☀️ Lindja</span><span class="ptime">6:06</span></td>
+    <td class="pcell c-fajr"><span class="clabel">🌙 Agimi</span><span class="ptime">04:41</span></td>
+    <td class="pcell"><span class="clabel">☀️ Lindja</span><span class="ptime">06:06</span></td>
     <td class="pcell"><span class="clabel">☀️ Dreka</span><span class="ptime">11:58</span></td>
     <td class="pcell"><span class="clabel">🌤️ Pasditja</span><span class="ptime">15:06</span></td>
     <td class="pcell c-maghrib"><span class="clabel">☁️ Iftar</span><span class="ptime">17:40</span></td>
@@ -482,8 +413,8 @@
 <div class="prayer-row">
   <div class="card-date">4 Mar</div>
   <table class="card-table" cellspacing="0" cellpadding="0"><tr>
-    <td class="pcell c-fajr"><span class="clabel">🌙 Agimi</span><span class="ptime">4:39</span></td>
-    <td class="pcell"><span class="clabel">☀️ Lindja</span><span class="ptime">6:04</span></td>
+    <td class="pcell c-fajr"><span class="clabel">🌙 Agimi</span><span class="ptime">04:39</span></td>
+    <td class="pcell"><span class="clabel">☀️ Lindja</span><span class="ptime">06:04</span></td>
     <td class="pcell"><span class="clabel">☀️ Dreka</span><span class="ptime">11:58</span></td>
     <td class="pcell"><span class="clabel">🌤️ Pasditja</span><span class="ptime">15:06</span></td>
     <td class="pcell c-maghrib"><span class="clabel">☁️ Iftar</span><span class="ptime">17:41</span></td>
@@ -493,8 +424,8 @@
 <div class="prayer-row">
   <div class="card-date">5 Mar</div>
   <table class="card-table" cellspacing="0" cellpadding="0"><tr>
-    <td class="pcell c-fajr"><span class="clabel">🌙 Agimi</span><span class="ptime">4:38</span></td>
-    <td class="pcell"><span class="clabel">☀️ Lindja</span><span class="ptime">6:02</span></td>
+    <td class="pcell c-fajr"><span class="clabel">🌙 Agimi</span><span class="ptime">04:38</span></td>
+    <td class="pcell"><span class="clabel">☀️ Lindja</span><span class="ptime">06:02</span></td>
     <td class="pcell"><span class="clabel">☀️ Dreka</span><span class="ptime">11:57</span></td>
     <td class="pcell"><span class="clabel">🌤️ Pasditja</span><span class="ptime">15:07</span></td>
     <td class="pcell c-maghrib"><span class="clabel">☁️ Iftar</span><span class="ptime">17:42</span></td>
@@ -504,8 +435,8 @@
 <div class="prayer-row">
   <div class="card-date">6 Mar</div>
   <table class="card-table" cellspacing="0" cellpadding="0"><tr>
-    <td class="pcell c-fajr"><span class="clabel">🌙 Agimi</span><span class="ptime">4:36</span></td>
-    <td class="pcell"><span class="clabel">☀️ Lindja</span><span class="ptime">6:01</span></td>
+    <td class="pcell c-fajr"><span class="clabel">🌙 Agimi</span><span class="ptime">04:36</span></td>
+    <td class="pcell"><span class="clabel">☀️ Lindja</span><span class="ptime">06:01</span></td>
     <td class="pcell"><span class="clabel">☀️ Dreka</span><span class="ptime">11:57</span></td>
     <td class="pcell"><span class="clabel">🌤️ Pasditja</span><span class="ptime">15:08</span></td>
     <td class="pcell c-maghrib"><span class="clabel">☁️ Iftar</span><span class="ptime">17:43</span></td>
@@ -515,8 +446,8 @@
 <div class="prayer-row">
   <div class="card-date">7 Mar</div>
   <table class="card-table" cellspacing="0" cellpadding="0"><tr>
-    <td class="pcell c-fajr"><span class="clabel">🌙 Agimi</span><span class="ptime">4:35</span></td>
-    <td class="pcell"><span class="clabel">☀️ Lindja</span><span class="ptime">5:59</span></td>
+    <td class="pcell c-fajr"><span class="clabel">🌙 Agimi</span><span class="ptime">04:35</span></td>
+    <td class="pcell"><span class="clabel">☀️ Lindja</span><span class="ptime">05:59</span></td>
     <td class="pcell"><span class="clabel">☀️ Dreka</span><span class="ptime">11:57</span></td>
     <td class="pcell"><span class="clabel">🌤️ Pasditja</span><span class="ptime">15:09</span></td>
     <td class="pcell c-maghrib"><span class="clabel">☁️ Iftar</span><span class="ptime">17:44</span></td>
@@ -526,8 +457,8 @@
 <div class="prayer-row">
   <div class="card-date">8 Mar</div>
   <table class="card-table" cellspacing="0" cellpadding="0"><tr>
-    <td class="pcell c-fajr"><span class="clabel">🌙 Agimi</span><span class="ptime">4:33</span></td>
-    <td class="pcell"><span class="clabel">☀️ Lindja</span><span class="ptime">5:58</span></td>
+    <td class="pcell c-fajr"><span class="clabel">🌙 Agimi</span><span class="ptime">04:33</span></td>
+    <td class="pcell"><span class="clabel">☀️ Lindja</span><span class="ptime">05:58</span></td>
     <td class="pcell"><span class="clabel">☀️ Dreka</span><span class="ptime">11:57</span></td>
     <td class="pcell"><span class="clabel">🌤️ Pasditja</span><span class="ptime">15:09</span></td>
     <td class="pcell c-maghrib"><span class="clabel">☁️ Iftar</span><span class="ptime">17:46</span></td>
@@ -537,8 +468,8 @@
 <div class="prayer-row">
   <div class="card-date">9 Mar</div>
   <table class="card-table" cellspacing="0" cellpadding="0"><tr>
-    <td class="pcell c-fajr"><span class="clabel">🌙 Agimi</span><span class="ptime">4:31</span></td>
-    <td class="pcell"><span class="clabel">☀️ Lindja</span><span class="ptime">5:56</span></td>
+    <td class="pcell c-fajr"><span class="clabel">🌙 Agimi</span><span class="ptime">04:31</span></td>
+    <td class="pcell"><span class="clabel">☀️ Lindja</span><span class="ptime">05:56</span></td>
     <td class="pcell"><span class="clabel">☀️ Dreka</span><span class="ptime">11:56</span></td>
     <td class="pcell"><span class="clabel">🌤️ Pasditja</span><span class="ptime">15:10</span></td>
     <td class="pcell c-maghrib"><span class="clabel">☁️ Iftar</span><span class="ptime">17:47</span></td>
@@ -548,8 +479,8 @@
 <div class="prayer-row">
   <div class="card-date">10 Mar</div>
   <table class="card-table" cellspacing="0" cellpadding="0"><tr>
-    <td class="pcell c-fajr"><span class="clabel">🌙 Agimi</span><span class="ptime">4:30</span></td>
-    <td class="pcell"><span class="clabel">☀️ Lindja</span><span class="ptime">5:54</span></td>
+    <td class="pcell c-fajr"><span class="clabel">🌙 Agimi</span><span class="ptime">04:30</span></td>
+    <td class="pcell"><span class="clabel">☀️ Lindja</span><span class="ptime">05:54</span></td>
     <td class="pcell"><span class="clabel">☀️ Dreka</span><span class="ptime">11:56</span></td>
     <td class="pcell"><span class="clabel">🌤️ Pasditja</span><span class="ptime">15:11</span></td>
     <td class="pcell c-maghrib"><span class="clabel">☁️ Iftar</span><span class="ptime">17:48</span></td>
@@ -559,8 +490,8 @@
 <div class="prayer-row">
   <div class="card-date">11 Mar</div>
   <table class="card-table" cellspacing="0" cellpadding="0"><tr>
-    <td class="pcell c-fajr"><span class="clabel">🌙 Agimi</span><span class="ptime">4:28</span></td>
-    <td class="pcell"><span class="clabel">☀️ Lindja</span><span class="ptime">5:53</span></td>
+    <td class="pcell c-fajr"><span class="clabel">🌙 Agimi</span><span class="ptime">04:28</span></td>
+    <td class="pcell"><span class="clabel">☀️ Lindja</span><span class="ptime">05:53</span></td>
     <td class="pcell"><span class="clabel">☀️ Dreka</span><span class="ptime">11:56</span></td>
     <td class="pcell"><span class="clabel">🌤️ Pasditja</span><span class="ptime">15:11</span></td>
     <td class="pcell c-maghrib"><span class="clabel">☁️ Iftar</span><span class="ptime">17:49</span></td>
@@ -570,8 +501,8 @@
 <div class="prayer-row">
   <div class="card-date">12 Mar</div>
   <table class="card-table" cellspacing="0" cellpadding="0"><tr>
-    <td class="pcell c-fajr"><span class="clabel">🌙 Agimi</span><span class="ptime">4:26</span></td>
-    <td class="pcell"><span class="clabel">☀️ Lindja</span><span class="ptime">5:51</span></td>
+    <td class="pcell c-fajr"><span class="clabel">🌙 Agimi</span><span class="ptime">04:26</span></td>
+    <td class="pcell"><span class="clabel">☀️ Lindja</span><span class="ptime">05:51</span></td>
     <td class="pcell"><span class="clabel">☀️ Dreka</span><span class="ptime">11:56</span></td>
     <td class="pcell"><span class="clabel">🌤️ Pasditja</span><span class="ptime">15:12</span></td>
     <td class="pcell c-maghrib"><span class="clabel">☁️ Iftar</span><span class="ptime">17:50</span></td>
@@ -581,8 +512,8 @@
 <div class="prayer-row">
   <div class="card-date">13 Mar</div>
   <table class="card-table" cellspacing="0" cellpadding="0"><tr>
-    <td class="pcell c-fajr"><span class="clabel">🌙 Agimi</span><span class="ptime">4:24</span></td>
-    <td class="pcell"><span class="clabel">☀️ Lindja</span><span class="ptime">5:49</span></td>
+    <td class="pcell c-fajr"><span class="clabel">🌙 Agimi</span><span class="ptime">04:24</span></td>
+    <td class="pcell"><span class="clabel">☀️ Lindja</span><span class="ptime">05:49</span></td>
     <td class="pcell"><span class="clabel">☀️ Dreka</span><span class="ptime">11:55</span></td>
     <td class="pcell"><span class="clabel">🌤️ Pasditja</span><span class="ptime">15:13</span></td>
     <td class="pcell c-maghrib"><span class="clabel">☁️ Iftar</span><span class="ptime">17:51</span></td>
@@ -592,8 +523,8 @@
 <div class="prayer-row">
   <div class="card-date">14 Mar</div>
   <table class="card-table" cellspacing="0" cellpadding="0"><tr>
-    <td class="pcell c-fajr"><span class="clabel">🌙 Agimi</span><span class="ptime">4:23</span></td>
-    <td class="pcell"><span class="clabel">☀️ Lindja</span><span class="ptime">5:48</span></td>
+    <td class="pcell c-fajr"><span class="clabel">🌙 Agimi</span><span class="ptime">04:23</span></td>
+    <td class="pcell"><span class="clabel">☀️ Lindja</span><span class="ptime">05:48</span></td>
     <td class="pcell"><span class="clabel">☀️ Dreka</span><span class="ptime">11:55</span></td>
     <td class="pcell"><span class="clabel">🌤️ Pasditja</span><span class="ptime">15:13</span></td>
     <td class="pcell c-maghrib"><span class="clabel">☁️ Iftar</span><span class="ptime">17:52</span></td>
@@ -603,8 +534,8 @@
 <div class="prayer-row">
   <div class="card-date">15 Mar</div>
   <table class="card-table" cellspacing="0" cellpadding="0"><tr>
-    <td class="pcell c-fajr"><span class="clabel">🌙 Agimi</span><span class="ptime">4:21</span></td>
-    <td class="pcell"><span class="clabel">☀️ Lindja</span><span class="ptime">5:46</span></td>
+    <td class="pcell c-fajr"><span class="clabel">🌙 Agimi</span><span class="ptime">04:21</span></td>
+    <td class="pcell"><span class="clabel">☀️ Lindja</span><span class="ptime">05:46</span></td>
     <td class="pcell"><span class="clabel">☀️ Dreka</span><span class="ptime">11:55</span></td>
     <td class="pcell"><span class="clabel">🌤️ Pasditja</span><span class="ptime">15:14</span></td>
     <td class="pcell c-maghrib"><span class="clabel">☁️ Iftar</span><span class="ptime">17:53</span></td>
@@ -614,8 +545,8 @@
 <div class="prayer-row">
   <div class="card-date">16 Mar</div>
   <table class="card-table" cellspacing="0" cellpadding="0"><tr>
-    <td class="pcell c-fajr"><span class="clabel">🌙 Agimi</span><span class="ptime">4:19</span></td>
-    <td class="pcell"><span class="clabel">☀️ Lindja</span><span class="ptime">5:44</span></td>
+    <td class="pcell c-fajr"><span class="clabel">🌙 Agimi</span><span class="ptime">04:19</span></td>
+    <td class="pcell"><span class="clabel">☀️ Lindja</span><span class="ptime">05:44</span></td>
     <td class="pcell"><span class="clabel">☀️ Dreka</span><span class="ptime">11:54</span></td>
     <td class="pcell"><span class="clabel">🌤️ Pasditja</span><span class="ptime">15:15</span></td>
     <td class="pcell c-maghrib"><span class="clabel">☁️ Iftar</span><span class="ptime">17:55</span></td>
@@ -625,8 +556,8 @@
 <div class="prayer-row">
   <div class="card-date">17 Mar</div>
   <table class="card-table" cellspacing="0" cellpadding="0"><tr>
-    <td class="pcell c-fajr"><span class="clabel">🌙 Agimi</span><span class="ptime">4:17</span></td>
-    <td class="pcell"><span class="clabel">☀️ Lindja</span><span class="ptime">5:43</span></td>
+    <td class="pcell c-fajr"><span class="clabel">🌙 Agimi</span><span class="ptime">04:17</span></td>
+    <td class="pcell"><span class="clabel">☀️ Lindja</span><span class="ptime">05:43</span></td>
     <td class="pcell"><span class="clabel">☀️ Dreka</span><span class="ptime">11:54</span></td>
     <td class="pcell"><span class="clabel">🌤️ Pasditja</span><span class="ptime">15:15</span></td>
     <td class="pcell c-maghrib"><span class="clabel">☁️ Iftar</span><span class="ptime">17:56</span></td>
@@ -636,8 +567,8 @@
 <div class="prayer-row">
   <div class="card-date">18 Mar</div>
   <table class="card-table" cellspacing="0" cellpadding="0"><tr>
-    <td class="pcell c-fajr"><span class="clabel">🌙 Agimi</span><span class="ptime">4:16</span></td>
-    <td class="pcell"><span class="clabel">☀️ Lindja</span><span class="ptime">5:41</span></td>
+    <td class="pcell c-fajr"><span class="clabel">🌙 Agimi</span><span class="ptime">04:16</span></td>
+    <td class="pcell"><span class="clabel">☀️ Lindja</span><span class="ptime">05:41</span></td>
     <td class="pcell"><span class="clabel">☀️ Dreka</span><span class="ptime">11:54</span></td>
     <td class="pcell"><span class="clabel">🌤️ Pasditja</span><span class="ptime">15:16</span></td>
     <td class="pcell c-maghrib"><span class="clabel">☁️ Iftar</span><span class="ptime">17:57</span></td>
@@ -647,8 +578,8 @@
 <div class="prayer-row">
   <div class="card-date">19 Mar</div>
   <table class="card-table" cellspacing="0" cellpadding="0"><tr>
-    <td class="pcell c-fajr"><span class="clabel">🌙 Agimi</span><span class="ptime">4:14</span></td>
-    <td class="pcell"><span class="clabel">☀️ Lindja</span><span class="ptime">5:39</span></td>
+    <td class="pcell c-fajr"><span class="clabel">🌙 Agimi</span><span class="ptime">04:14</span></td>
+    <td class="pcell"><span class="clabel">☀️ Lindja</span><span class="ptime">05:39</span></td>
     <td class="pcell"><span class="clabel">☀️ Dreka</span><span class="ptime">11:54</span></td>
     <td class="pcell"><span class="clabel">🌤️ Pasditja</span><span class="ptime">15:16</span></td>
     <td class="pcell c-maghrib"><span class="clabel">☁️ Iftar</span><span class="ptime">17:58</span></td>
@@ -658,8 +589,8 @@
 <div class="prayer-row">
   <div class="card-date">20 Mar</div>
   <table class="card-table" cellspacing="0" cellpadding="0"><tr>
-    <td class="pcell c-fajr"><span class="clabel">🌙 Agimi</span><span class="ptime">4:12</span></td>
-    <td class="pcell"><span class="clabel">☀️ Lindja</span><span class="ptime">5:38</span></td>
+    <td class="pcell c-fajr"><span class="clabel">🌙 Agimi</span><span class="ptime">04:12</span></td>
+    <td class="pcell"><span class="clabel">☀️ Lindja</span><span class="ptime">05:38</span></td>
     <td class="pcell"><span class="clabel">☀️ Dreka</span><span class="ptime">11:53</span></td>
     <td class="pcell"><span class="clabel">🌤️ Pasditja</span><span class="ptime">15:17</span></td>
     <td class="pcell c-maghrib"><span class="clabel">☁️ Iftar</span><span class="ptime">17:59</span></td>
@@ -667,8 +598,8 @@
   </tr></table>
 </div>
 
-    </div><!-- end prayerTable -->
-  </div><!-- end table-wrapper -->
+    </div>
+  </div>
 
   <div class="city-corrections">
     <div class="city-corrections-title">⏱ Ndryshimet për qytetet · Korrigjimi i minutave</div>
@@ -706,36 +637,25 @@
 </div>
 
 <script>
-// Dynamically highlight the current active prayer for TODAY
 (function() {
   var todayRow = document.querySelector('.prayer-row.today');
   if (!todayRow) return;
-
   var cells = todayRow.querySelectorAll('td.pcell');
-  // cells[0]=Agimi, [1]=Lindja, [2]=Dreka, [3]=Pasditja, [4]=Iftar, [5]=Jacia
-
   var times = [];
   for (var i = 0; i < cells.length; i++) {
     var t = cells[i].querySelector('.ptime');
     if (t) {
       var parts = t.textContent.trim().split(':');
       times.push(parseInt(parts[0]) * 60 + parseInt(parts[1]));
-    } else {
-      times.push(0);
-    }
+    } else { times.push(0); }
   }
-
   var now = new Date();
   var nowMin = now.getHours() * 60 + now.getMinutes();
-
   var activeIdx = -1;
   for (var j = 0; j < times.length; j++) {
     if (nowMin >= times[j]) activeIdx = j;
   }
-
-  if (activeIdx >= 0) {
-    cells[activeIdx].classList.add('active-prayer');
-  }
+  if (activeIdx >= 0) cells[activeIdx].classList.add('active-prayer');
 })();
 </script>
 </body>
