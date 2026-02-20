@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prayer Times — Ramadan 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    min-height: 100vh;
+    background: #f5f0e8;
+    font-family: "DM Sans", sans-serif;
+    color: #2d2820;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+  }
+
+  .wrapper {
+    width: 100%;
+    max-width: 480px;
+    text-align: center;
+  }
+
+  .label {
+    font-size: 10px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: #a89880;
+    margin-bottom: 20px;
+    display: block;
+  }
+
+  .arabic {
+    font-family: "Tajawal", sans-serif;
+    font-size: 48px;
+    font-weight: 400;
+    color: #2d2820;
+    line-height: 1.1;
+    margin-bottom: 10px;
+  }
+
+  .title {
+    font-family: "Playfair Display", serif;
+    font-size: 15px;
+    font-style: italic;
+    font-weight: 400;
+    color: #7a6e60;
+    letter-spacing: 1px;
+    margin-bottom: 52px;
+  }
+
+  .cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 52px;
+  }
+
+  .card {
+    display: block;
+    text-decoration: none;
+    background: #ede8de;
+    border-radius: 16px;
+    padding: 32px 20px 28px;
+    border: 1px solid #d8d0c0;
+    transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+    text-align: left;
+  }
+
+  .card:hover {
+    background: #e6dfd2;
+    border-color: #c4baa8;
+    transform: translateY(-3px);
+  }
+
+  .card-gmt {
+    font-size: 9px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #a89880;
+    margin-bottom: 20px;
+    display: block;
+  }
+
+  .card-city {
+    font-family: "Playfair Display", serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: #2d2820;
+    margin-bottom: 4px;
+  }
+
+  .card-country {
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #a89880;
+    margin-bottom: 24px;
+  }
+
+  .card-arrow {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #7a6e60;
+  }
+
+  .divider {
+    width: 40px;
+    height: 1px;
+    background: #c8b89a;
+    margin: 0 auto 20px;
+  }
+
+  .footer {
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #a89880;
+  }
+
+  @media (max-width: 400px) {
+    .cards { grid-template-columns: 1fr; }
+    .arabic { font-size: 36px; }
+  }
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="wrapper">
+
+  <span class="label">Ramadan 2026</span>
+  <div class="arabic">رَمَضَان كَرِيم</div>
+  <div class="title">Prayer Times — Select your city</div>
+
+  <div class="cards">
+    <a class="card" href="prayer-times-athens.html">
+      <span class="card-gmt">GMT+02:00</span>
+      <div class="card-city">Athens</div>
+      <div class="card-country">Greece</div>
+      <span class="card-arrow">View →</span>
+    </a>
+    <a class="card" href="prayer-times-albanian.html">
+      <span class="card-gmt">GMT+01:00</span>
+      <div class="card-city">Tirana</div>
+      <div class="card-country">Albania</div>
+      <span class="card-arrow">View →</span>
+    </a>
+  </div>
+
+  <div class="divider"></div>
+  <div class="footer">Ramadan Mubarak</div>
+
+</div>
+</body>
+</html>
